@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #89909f;
+    position: relative;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    position: absolute;
+    top: 18px;
+    color: rgb(0, 0, 0);
+}
+
+.wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    border: 1px solid black;
+    background-color: #a399a8;
+    padding: 20px;
+    width: 30%;
+}
+
+.wraper .input {
+    border: 1px solid black;
+    width: 90%;
+    height: fit-content;
+    padding: 12px;
+    background-color: cornflowerblue;
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 12px;
+}
+
+.wraper .input input {
+    width: 100%;
+    height: 70%;
+    border: 1px dotted black;
+    border-radius: 12px;
+    padding: 6px;
+    outline: none;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.wraper .input input::placeholder {
+    font-size: 14px;
+}
+
+.buttons{
+    display: flex;
+}
+
+.wraper .input button {
+    padding: 4px 8px;
+    margin: 18px 12px;
+    border-radius: 12px;
+    border: none;
+    border: 2px solid green;
+    color: green;
+    cursor: pointer;
+}
+
+.wraper .input button:hover{
+    transform: scale(1.05);
+    color: white;
+    background-color: green;
+    border-color: white;
+}
+
+@media screen and (max-width: 1200px) {
+    .wraper {
+        width: 50vw;
+        min-height: 50vh;
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wraper {
+        width: 70vw;
+        height: fit-content;
+    }
+
+    .wraper .input input {
+        width: 100%;
+        height: 57%;
+        font-size: 10px;
+    }
+
+    .wraper .input input::placeholder {
+        font-size: 14px;
+    }
+
+    .wraper .input button {
+        width: 18vw;
+    }
+}
